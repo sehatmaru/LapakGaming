@@ -1,4 +1,4 @@
-package sehatmaru.lapakgaming._sliders;
+package sehatmaru.lapakgaming.Helper.Slider;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

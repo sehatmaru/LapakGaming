@@ -1,4 +1,4 @@
-package sehatmaru.lapakgaming._sliders;
+package sehatmaru.lapakgaming.Helper.Slider;
 
 import android.net.Uri;
 import android.os.Bundle;

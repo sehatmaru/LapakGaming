@@ -11,10 +11,10 @@ import android.widget.LinearLayout;
 import java.util.ArrayList;
 import java.util.List;
 
-import sehatmaru.lapakgaming._sliders.FragmentSlider;
-import sehatmaru.lapakgaming._sliders.SliderIndicator;
-import sehatmaru.lapakgaming._sliders.SliderPagerAdapter;
-import sehatmaru.lapakgaming._sliders.SliderView;
+import sehatmaru.lapakgaming.Helper.Slider.FragmentSlider;
+import sehatmaru.lapakgaming.Helper.Slider.SliderIndicator;
+import sehatmaru.lapakgaming.Helper.Slider.SliderPagerAdapter;
+import sehatmaru.lapakgaming.Helper.Slider.SliderView;
 
 
 /**
