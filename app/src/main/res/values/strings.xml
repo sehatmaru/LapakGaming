@@ -22,4 +22,8 @@
     <string name="console">Console</string>
     <string name="gear">Gear</string>
     <string name="exit">Exit</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="title_logout">Logout</string>
+    <string name="content_logout">Are you sure ?</string>
 </resources>

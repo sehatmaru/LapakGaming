@@ -1,5 +1,6 @@
 package sehatmaru.lapakgaming.Home;
 
+import android.content.Intent;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -16,6 +17,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.afollestad.materialdialogs.MaterialDialog;
+
+import sehatmaru.lapakgaming.Helper.LoginActivity;
 import sehatmaru.lapakgaming.R;
 
 public class HomeActivity extends AppCompatActivity
@@ -81,6 +85,7 @@ public class HomeActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_exit) {
+            logoutDialog();
             return true;
         }
 
@@ -94,9 +99,9 @@ public class HomeActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_share) {
-
+            actionNotFound();
         } else if (id == R.id.nav_send) {
-
+            actionNotFound();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -104,8 +109,7 @@ public class HomeActivity extends AppCompatActivity
         return true;
     }
 
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -141,5 +145,32 @@ public class HomeActivity extends AppCompatActivity
         transaction.replace(R.id.frame_container, fragment);
         transaction.addToBackStack(null);
         transaction.commit();
+    }
+
+    private void signOut(){
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+//        startActivity(LoginActivity.createIntent(getActivity().getApplicationContext()));
+        Toast.makeText(this, "Logout Successfully", Toast.LENGTH_LONG).show();
+    }
+
+    private void logoutDialog() {
+        MaterialDialog dialog = new MaterialDialog.Builder(this)
+                .title(R.string.title_logout)
+                .content(R.string.content_logout)
+                .positiveText(R.string.yes)
+                .negativeText(R.string.no)
+                .onPositive((dialog1, which) -> {
+                    signOut();
+                })
+                .onNegative((dialog1, which) -> {
+
+                })
+                .build();
+        dialog.show();
+    }
+
+    public void actionNotFound(){
+        Toast.makeText(this, "Menu ini belum tersedia", Toast.LENGTH_SHORT).show();
     }
 }
