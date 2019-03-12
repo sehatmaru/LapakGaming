@@ -1,4 +1,4 @@
-package sehatmaru.lapakgaming;
+package sehatmaru.lapakgaming.Helper.BottomNavigation;
 
 import android.content.Context;
 import android.support.design.widget.BottomNavigationView;

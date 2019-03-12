@@ -1,4 +1,4 @@
-package sehatmaru.lapakgaming;
+package sehatmaru.lapakgaming.Home;
 
 
 import android.os.Bundle;
@@ -15,6 +15,7 @@ import sehatmaru.lapakgaming.Helper.Slider.FragmentSlider;
 import sehatmaru.lapakgaming.Helper.Slider.SliderIndicator;
 import sehatmaru.lapakgaming.Helper.Slider.SliderPagerAdapter;
 import sehatmaru.lapakgaming.Helper.Slider.SliderView;
+import sehatmaru.lapakgaming.R;
 
 
 /**

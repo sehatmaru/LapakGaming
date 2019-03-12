@@ -1,10 +1,13 @@
-package sehatmaru.lapakgaming;
+package sehatmaru.lapakgaming.Helper;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import sehatmaru.lapakgaming.Home.HomeActivity;
+import sehatmaru.lapakgaming.R;
 
 public class LoginActivity extends AppCompatActivity {
 
